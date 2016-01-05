@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Brandon Shewmake Music</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body ng-controller="ResumeCtrl" ng-init="transitionSpring();" ng-cloak>
+  <svg id="background-svg"></svg>
+  <svg id="tree-svg"></svg>
+  <section id="main-content">
+      <div class="content-wrapper">
+        <div class="resume-wrapper">
+          <div class="resume">
+            <div class="tab-content">
+              <div id="section-about" class="tab-pane active">
+                <div class="visual-info">
+                  <img src="images/bsm-logo.png" width="240" />
+                  <span>Brandon Shewmake Music</span>
+                </div>
+                <p>Brandon Shewmake is a composer for visual media where real or fantastical environments are a focal point. He uses a combination of instrumental and electronic sounds to compose pieces that evoke the motifs of these environments.</p>
+                <p>Brandon's personal music library continues to consist of film and video game soundtracks, which inspire his endeavors day after day. He adventured into the creational sphere of music in middle school and high school through arranging professional composers' pieces for piano, and he was honored to win second place in the Guild Wars 2008 Wintersday Art Contest for his arrangement of Jeremy Soule's idyllic, wintry pieces.</p>
+                <p>
+                  <object height="81" width="100%" id="yourPlayerId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                    <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fmatas%2Fhobnotropic&enable_api=true&object_id=yourPlayerId"></param>
+                    <param name="allowscriptaccess" value="always"></param>
+                    <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fmatas%2Fhobnotropic&enable_api=true&object_id=yourPlayerId" type="application/x-shockwave-flash" width="100%" name="yourPlayerId"></embed>
+                  </object>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer id="main-footer">
+    <p>Copyright &copy; 2015, Brandon Shewmake. All rights reserved.</p>
+  </footer>
+  <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
+</body>
+</html>
