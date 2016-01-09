@@ -19,6 +19,21 @@ define([
       exeSpawnAutumn
     ];
     
+    this.progressThroughAllSeasons = function() {
+      var promisedWinter = exeSpawnWinter($q, treeService)
+      
+      /* TODO: Refactor to use promises. */
+      setTimeout(function() {
+        exeSpawnSpring($q, treeService);
+        
+        setTimeout(function() {
+          exeSpawnAutumn($q, treeService);
+        }, 1000)
+      }, 1000);
+      
+      return null;
+    }
+    
     this.spawnNextSeason = function() {
       if (nextIndex == seasons.length) nextIndex = 0;
       

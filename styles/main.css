@@ -1,231 +1,316 @@
-/************ <POSITIONING> ************/
-html {
+/************<POSITION>************/
+/* All devices */
+html, body {
+  height: 100%;
+  font-size: 16pt;
+  overflow-x: hidden;
+}
+
+#background-svg, #tree-svg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
   height: 100%;
 }
 
-body {
+.jumbotron {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.status-available {
+  color: green;
+}
+
+.status-unavailable {
+  color: orange;
+}
+
+.vertical-centering-container {
+  white-space: nowrap;
+}
+
+.vertically-centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+#section-home, #section-awards, #section-contact {
+  text-align: center;
+}
+
+#logo {
+  width: 60%;
+}
+
+.stuck {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+p {
+  white-space: normal;
+}
+
+#playlist {
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+/*.list-icon, .list-info { 
+  float: left;
+}*/
+
+footer {
+  text-align: center;
+}
+
+footer > p {
+  margin: 0;
+}
+
+/* Extra small devices (phones, less than 768px) */
+.section {
   min-height: 100%;
-  font-size: 16px;
 }
 
-.visual-info {
-  margin: 0px auto;
-  text-align: center;
-  overflow: hidden;
-  border-bottom: 2px solid black;
+#section-about {
+  padding: 3px;
 }
 
-.visual-info > img {
-  vertical-align: baseline;
+h1, .jumbotron > h1 {
+  font-size: 1em;
 }
 
-.visual-info > span {
-  font-size: 3em;
-}
-
-#main-content {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  overflow: auto;
-}
-
-#background-svg,
-#tree-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#main-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-style: solid;
-  font-weight: bold;
-}
-
-.content-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.resume-wrapper {
-  text-align: center;
-  height: 100%;
-}
-
-.resume {
-  height: 100%;
-  text-align: left;
-}
-
-.tab-content > div > h1 {
-  text-align: center;
-}
-
-#main-footer > p {
-  text-align: center;
-}
-
-.experience-type {
+.fa, .list-info {
   display: inline;
 }
 
-.experience {
-  text-align: left;
-  margin: 0 15%;
+p {
+  font-size: 0.75em;
+  line-height: 0.85em;
 }
 
-.skills-label {
-  font-weight: bold;
-}
-
-.exp-skills,
-.exp-location,
-.exp-dates {
-  font-size: 0.9em;
-}
-
-.exp-type,
-.exp-location,
-.exp-dates {
-  text-align: center;
-  font-weight: bold;
-}
-
-.fa {
-  text-align: center;
+.visual-content-img {
   width: 100%;
-}
-/*********** </POSITIONING> ************/
-
-/************ <PALETTE> ************/
-#main-content {
-  background-color: rgba(231, 231, 231, 0.9);
+  margin-right: 0;
 }
 
-.resume hr {
-  border-color: #858585;
-}
-
-.carousel-indicators  > li {
-  border-color: #C4C4C4;
-  background-color: #C4C4C4;
-}
-
-#main-footer {
-  border-color: #89A983;
-  background-color: #6A8565;
-  color: #C5D4C2;
-}
-/*********** </PALETTE> ************/
-
-/************ <MEDIA-SPECIFIC STYLING> ************/
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default */
-#main-content {
-  margin-bottom: 50px;
-}
-
-#main-footer {
-  min-height: 50px;
-  border-width: 2px 0 0;
-  padding-top: 4px;
-  font-size: 0.5em;
-}
-
-.resume {
-  padding: 1px;
-}
-
-#profile-picture {
-  width: 100%;
+footer > p {
+  font-size: 0.45em;
 }
 
 /* Small devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
-  #main-content {
-    margin-bottom: 75px;
+@media (min-width: 768px) {
+  .vertical-centering-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .section {
+    height: 100%;
+  }
+  
+  #section-about {
+    padding: 6px;
+  }
+  
+  h1, .jumbotron > h1 {
+    font-size: 1.34em;
+  }
+  
+  .fa {
+    margin-right: 6px;
+  }
+  
+  p, .fa {
+    font-size: 0.9em;
+    line-height: 1em;
+  }
+  
+  .navbar-nav, .navbar-nav > li {
+    float: none;
   }
 
-  #main-footer {
-    min-height: 75px;
-    border-width: 4px 0 0;
-    padding-top: 12px;
-    font-size: 0.6em;
+  .navbar-nav > li {
+    display: inline-block;
   }
   
-  .resume {
-    padding: 2px;
-  }
-  
-  #profile-picture {
+  .visual-content-img {
     float: left;
     width: 25%;
-    margin-right: 2px;
+    margin-right: 6px;
+  }
+  
+  footer > p {
+    font-size: 0.6em;
   }
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-  #main-content {
-    margin-bottom: 100px;
-  }
-
-  #main-footer {
-    min-height: 100px;
-    border-width: 6px 0 0;
-    padding-top: 24px;
-    font-size: 0.7em;
+@media (min-width: 992px) {
+  #section-about {
+    padding: 9px;
   }
   
-  #profile-picture {
-    margin-right: 3px;
+  h1, .jumbotron > h1 {
+    font-size: 1.67em;
+  }
+  
+  .fa {
+    margin-right: 9px;
+  }
+  
+  p, .fa {
+    font-size: 1.05em;
+    line-height: 1.15em;
+  }
+  
+  .visual-content-img {
+    margin-right: 9px;
+  }
+
+  footer > p {
+    font-size: 0.75em;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #main-content {
-    margin-bottom: 125px;
-  }
-
-  #main-footer {
-    min-height: 125px;
-    border-width: 8px 0 0;
-    padding-top: 40px;
-    font-size: 0.8em;
+  #section-about {
+    padding: 12px;
   }
   
-  #profile-picture {
-    margin-right: 4px;
+  .jumbotron > h1 {
+    font-size: 2em;
+  }
+
+
+  .fa {
+    margin-right: 12px;
+  }
+  
+  p, .fa {
+    font-size: 1.2em;
+    line-height: 1.3em;
+  }
+  
+  .visual-content-img {
+    margin-right: 12px;
+  }
+  
+  footer > p {
+    font-size: 0.9em;
   }
 }
-/*********** </MEDIA-SPECIFIC STYLING> ************/
-
-/************ <ANGULAR OVERRIDES> ************/
-[ng\:cloak], [ng-cloak], .ng-cloak {
-  display: none !important;
-}
-/*********** </ANGULAR OVERRIDES> ************/
-
-/************ <BOOTSTRAP OVERRIDES> ************/
-.carousel-indicators {
-  position: relative;
-  margin: 0 0 0 15%;
-  padding: 12px 0 0 0;
-  text-align: left;
-  left: 0;
+/***********</POSITION>************/
+/************<PALETTE>************/
+/* All devices */
+body {
+  background-color: #C5D4C2;
+  font-family: Georgia;
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+.jumbotron {
+  background: none;
 }
 
-.carousel-control > span {
-  cursor: pointer;
+a, a:link, a:visited, a:hover, a:active {
+ text-decoration: none;
 }
-/*********** </BOOTSTRAP OVERRIDES> ************/
+
+h1, jumbotron > h1 {
+  font-family: Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron > h1 {
+  text-transform: uppercase;
+  color: rgb(240, 240, 240);
+  background: rgba(15, 15, 15, 0.9);
+}
+
+.navbar, .navbar-default {
+  background: none;
+  border: none;
+}
+
+.fa-envelope {
+  color: #FFF;
+}
+
+.fa-soundcloud {
+  color: #FF3A00;
+}
+
+.fa-facebook {
+  color: #3B5998
+}
+
+.fa-twitter {
+  color: #00ACED
+}
+
+.fa-linkedin {
+  color: #007BB6;
+}
+
+.section, footer {
+  background-color: rgba(231, 231, 231, 0.9);
+}
+
+/* Extra small devices (phones, less than 768px) */
+.jumbotron {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.jumbotron > h1 {
+  padding: 0;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-left: 30px;
+    padding-right: 60px;
+  }
+  
+  .jumbotron > h1 {
+    padding: 5 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .jumbotron {
+    padding-left: 30px;
+    padding-right: 60px;
+  }
+  
+  .jumbotron > h1 {
+    padding: 10 0;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .jumbotron {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .jumbotron > h1 {
+    padding: 10 0;
+  }
+}
+/***********</PALETTE>************/
