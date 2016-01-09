@@ -36,6 +36,14 @@ html, body {
   width: 100%;
 }
 
+.vertical-centering-container:before {
+  content: '';
+  margin-right: -0.25em;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 #section-home, #section-awards, #section-contact {
   text-align: center;
 }
@@ -44,10 +52,23 @@ html, body {
   width: 60%;
 }
 
+.navbar {
+  border-radius: 0;
+}
+
 .stuck {
   position: fixed;
   width: 100%;
   top: 0;
+}
+
+.section-inner {
+  display: inline-block;
+}
+
+.section-inner p {
+  display: inline-block;
+  text-align: left;
 }
 
 p {
@@ -78,10 +99,10 @@ footer > p {
 
 /* Extra small devices (phones, less than 768px) */
 .section {
-  min-height: 100%;
+  height: auto;
 }
 
-#section-about {
+#section-about, #section-awards, #section-contact {
   padding: 3px;
 }
 
@@ -101,6 +122,7 @@ p {
 .visual-content-img {
   width: 100%;
   margin-right: 0;
+  margin-bottom: 12px;
 }
 
 footer > p {
@@ -109,13 +131,6 @@ footer > p {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .vertical-centering-container:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-  
   .section {
     height: 100%;
   }
@@ -149,6 +164,7 @@ footer > p {
     float: left;
     width: 25%;
     margin-right: 6px;
+    margin-bottom: 0;
   }
   
   footer > p {

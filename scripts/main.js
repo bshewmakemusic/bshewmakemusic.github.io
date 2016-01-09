@@ -26,7 +26,7 @@
       mountainsService:     "../services/mountains-service",
       treeService:          "../services/tree-service",
       seasonService:        "../services/season-service",
-      resumeController:     "../controllers/resume-controller"
+      natureController:     "../controllers/nature-controller"
     },
     shim: {
       angular: { exports: "angular" },
