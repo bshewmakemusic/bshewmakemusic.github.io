@@ -106,8 +106,13 @@ footer > p {
   padding: 3px;
 }
 
+.jumbotron {
+  padding: 0;
+}
+
 h1, .jumbotron > h1 {
   font-size: 1em;
+  margin: 0;
 }
 
 .fa, .list-info {
@@ -137,6 +142,10 @@ footer > p {
   
   #section-about {
     padding: 6px;
+  }
+  
+  .jumbotron {
+    padding: 50px;
   }
   
   h1, .jumbotron > h1 {
