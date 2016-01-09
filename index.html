@@ -30,7 +30,7 @@
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#section-home" ng-click="transitionSpring()">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="#heading-music">Music</a></li>
+              <li><a id="link-music" href="#heading-music">Music</a></li>
               <li><a href="#heading-about">About</a></li>
               <li><a href="#heading-awards">Awards</a></li>
               <li><a href="#heading-contact">Contact</a></li>
@@ -78,10 +78,10 @@
       <p>I am currently <span class="status-available">available</span> to compose music for your visual media.</p>
       <p>Please contact me through one of the following channels.</p>
       <a href="mailto:brandon@bshewmakemusic.com"><i class="fa fa-envelope"></i></a>
-      <a href="https://soundcloud.com/brandon-shewmake-music"<i class="fa fa-soundcloud"></i></a>
-      <a href="https://www.facebook.com/bshewmakemusic"<i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/bshewmakemusic"<i class="fa fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/shewstr"<i class="fa fa-linkedin"></i></a>
+      <a href="https://soundcloud.com/brandon-shewmake-music" target="_blank"><i class="fa fa-soundcloud"></i></a>
+      <a href="https://www.facebook.com/bshewmakemusic" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/bshewmakemusic" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/shewstr" target="_blank"><i class="fa fa-linkedin"></i></a>
     </div>
   </div>
   <footer>
@@ -90,83 +90,3 @@
   <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
 </body>
 </html>
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <title>Brandon Shewmake Music</title>
-  <link rel="shortcut icon" href="images/bsm-logo.ico">
-  <link rel="stylesheet" type="text/css" href="styles/vendor/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
-<body ng-controller="ResumeCtrl" ng-init="transitionSpring()" ng-cloak>
-  <svg id="background-svg"></svg>
-  <svg id="tree-svg"></svg>
-  <div id="home" class="section">
-    <div class="section-content vertical-centering-container">
-      <div class="section-content-inner vertically-centered">
-        <img id="logo" src="images/bsm-logo.svg" />
-        <p><h1 id="home-info">Brandon Shewmake Music</h1></p>
-        <nav id="navigation" class="navbar">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#home" ng-click="transitionSpring()">Home<span class="sr-only">(current)</span></a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <div id="music" class="section">
-    <div class="jumbotron">
-      <h1>Music</h1>
-    </div>
-    <div class="section-content">
-      <iframe id="playlist" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/187052150&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-    </div>
-  </div>
-  <div id="about" class="section">
-    <div class="jumbotron">
-      <h1>About</h1>
-    </div>
-    <div class="section-content">
-      <div class="visual-content">
-        <img id="profile-picture" class="visual-content-img" src="images/profile-picture.jpg" />
-        <div class="visual-content-info">
-          <p>I am a composer for visual media where real or fantastical environments are a focal point. I use a combination of instrumental and electronic sounds to compose pieces that evoke the motifs of these environments.</p>
-          <p>My personal music library continues to consist of film and video game soundtracks, which inspire my endeavors day after day. I adventured into the creational sphere of music in middle school and high school through arranging professional composers' pieces for piano.</p>
-          <p>I would be glad to compose music for your visual media.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="contact" class="section">
-    <div class="jumbotron">
-      <h1>Contact</h1>
-    </div>
-    <div class="section-content">
-    </div>
-  </div>
-  <footer id="footer" class="section">
-    <div class="section-content">
-      <p>Copyright &copy; 2015, Brandon Shewmake. All rights reserved.</p>
-    </div>
-  </footer>
-  <script data-main="scripts/main" src="scripts/vendor/require.js"></script>
-</body>
-</html> -->

@@ -224,6 +224,10 @@ body {
   background: none;
 }
 
+.stuck {
+  background-color: #C5D4C2 !important;
+}
+
 a, a:link, a:visited, a:hover, a:active {
  text-decoration: none;
 }

@@ -7,6 +7,7 @@
       /* vendors */
       angular:      "angular.min",
       jquery:       "jquery-1.11.3.min",
+      smoothScroll: "jquery.smooth-scroll.min",
       jqueryColor:  "jquery.color",
       underscore:   "underscore-min",
       snap:         "snap.svg-min",
@@ -30,6 +31,7 @@
     shim: {
       angular: { exports: "angular" },
       jquery: { exports: "$" },
+      smoothScroll: { deps: ["jquery"], exports: "smoothScroll" },
       jqueryColor: { deps: ["jquery"], exports: "jqueryColor" },
       underscore: { exports: "_" },
       snap: { exports: "snap" },
@@ -39,18 +41,36 @@
     }
   });
 
-  require(["angular", "app", "bootstrap"], function(angular, app) {
+  require(["angular", "app", "bootstrap", "smoothScroll"], function(angular, app) {
     angular.bootstrap(document, [app.name]);
     
-    var nav = $("#navigation");
-    $(window).scroll(function() {
-      var aboveNavHeight = $("#section-home").outerHeight(true);
+    $('.navbar-nav li').click(function(e) {
+      $(".navbar-nav li.active").removeClass("active");
+      $(".tab-content > div.active").removeClass("active");
       
-      if($(this).scrollTop() > aboveNavHeight) {
-        nav.addClass("stuck");
-      } else {
-        nav.removeClass("stuck");
-      }
+      var $this = $(this);
+      var link = $this.find("a").attr("href");
+      
+      if (!$this.hasClass("active"))
+        $this.addClass("active");
+      
+      if (!$(link).hasClass("active"))
+        $(link).addClass("active");
+      
+      //e.preventDefault();
+    });
+    
+    $(document).ready(function() {
+      var nav = $("#navigation");
+      $("body").scroll(function() {
+        var aboveNavHeight = $("#section-home").outerHeight(true);
+        
+        if($(this).scrollTop() >= aboveNavHeight) {
+          nav.addClass("stuck");
+        } else {
+          nav.removeClass("stuck");
+        }
+      });
     });
   });
 })();
