@@ -7,7 +7,6 @@
       /* vendors */
       angular:      "angular.min",
       jquery:       "jquery-1.11.3.min",
-      smoothScroll: "jquery.smooth-scroll.min",
       jqueryColor:  "jquery.color",
       underscore:   "underscore-min",
       snap:         "snap.svg-min",
@@ -31,7 +30,6 @@
     shim: {
       angular: { exports: "angular" },
       jquery: { exports: "$" },
-      smoothScroll: { deps: ["jquery"], exports: "smoothScroll" },
       jqueryColor: { deps: ["jquery"], exports: "jqueryColor" },
       underscore: { exports: "_" },
       snap: { exports: "snap" },
@@ -41,28 +39,42 @@
     }
   });
 
-  require(["angular", "app", "bootstrap", "smoothScroll"], function(angular, app) {
+  require(["angular", "app", "bootstrap"], function(angular, app) {
     angular.bootstrap(document, [app.name]);
-    
-    $('.navbar-nav li').click(function(e) {
-      $(".navbar-nav li.active").removeClass("active");
-      $(".tab-content > div.active").removeClass("active");
+    // $('.navbar-nav li a').on('click', function(e) {
+      // e.stopPropagation()
       
-      var $this = $(this);
-      var link = $this.find("a").attr("href");
+      // if (!$this.parent().hasClass("active"))
+        // $this.parent().addClass("active");
       
-      if (!$this.hasClass("active"))
-        $this.addClass("active");
-      
-      if (!$(link).hasClass("active"))
-        $(link).addClass("active");
-      
-      //e.preventDefault();
-    });
+      // $($this).smoothScroll();
+    // });
     
     $(document).ready(function() {
+      $('.nav-link').on('click', function(e) {
+        e.preventDefault();
+        
+        var $this = $(this);
+        var link = $this.attr("href");
+        var target = $(link);
+        
+        $(".navbar-nav li.active").removeClass("active");
+        if (!$this.parent().hasClass("active"))
+          $this.parent().addClass("active");
+        
+        var targetOffset = target.offset().top;
+        var docOffset = $("html").scrollTop();
+        var totalOffset = targetOffset - docOffset;
+        
+        $("html").stop().animate({
+          scrollTop: targetOffset
+        }, 500);
+        
+        return false;
+      });
+      
       var nav = $("#navigation");
-      $("body").scroll(function() {
+      $(window).scroll(function() {
         var aboveNavHeight = $("#section-home").outerHeight(true);
         
         if($(this).scrollTop() >= aboveNavHeight) {
