@@ -6,7 +6,7 @@
       Utility:  "../utility",
       /* vendors */
       angular:      "angular.min",
-      jquery:       "jquery-1.11.3.min",
+      jquery:       "jquery-2.2.0.min",
       jqueryColor:  "jquery.color",
       underscore:   "underscore-min",
       snap:         "snap.svg-min",
@@ -41,17 +41,9 @@
 
   require(["angular", "app", "bootstrap"], function(angular, app) {
     angular.bootstrap(document, [app.name]);
-    // $('.navbar-nav li a').on('click', function(e) {
-      // e.stopPropagation()
-      
-      // if (!$this.parent().hasClass("active"))
-        // $this.parent().addClass("active");
-      
-      // $($this).smoothScroll();
-    // });
     
     $(document).ready(function() {
-      $('.nav-link').on('click touchstart', function(e) {
+      $('.nav-link').on('click touchend', function(e) {
         e.preventDefault();
         
         var $this = $(this);
