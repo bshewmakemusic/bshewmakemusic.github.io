@@ -3,7 +3,6 @@
 html, body {
   height: 100%;
   font-size: 16pt;
-  overflow-x: hidden;
 }
 
 #background-svg, #tree-svg {
@@ -121,7 +120,6 @@ h1, .jumbotron > h1 {
 
 p {
   font-size: 0.75em;
-  line-height: 0.85em;
 }
 
 .visual-content-img {
@@ -131,6 +129,7 @@ p {
 }
 
 footer > p {
+  padding: 3px;
   font-size: 0.45em;
 }
 
@@ -158,7 +157,6 @@ footer > p {
   
   p, .fa {
     font-size: 0.9em;
-    line-height: 1em;
   }
   
   .navbar-nav, .navbar-nav > li {
@@ -177,6 +175,7 @@ footer > p {
   }
   
   footer > p {
+    padding: 6px;
     font-size: 0.6em;
   }
 }
@@ -197,7 +196,6 @@ footer > p {
   
   p, .fa {
     font-size: 1.05em;
-    line-height: 1.15em;
   }
   
   .visual-content-img {
@@ -205,6 +203,7 @@ footer > p {
   }
 
   footer > p {
+    padding: 9px;
     font-size: 0.75em;
   }
 }
@@ -226,7 +225,6 @@ footer > p {
   
   p, .fa {
     font-size: 1.2em;
-    line-height: 1.3em;
   }
   
   .visual-content-img {
@@ -234,6 +232,7 @@ footer > p {
   }
   
   footer > p {
+    padding: 12px;
     font-size: 0.9em;
   }
 }
