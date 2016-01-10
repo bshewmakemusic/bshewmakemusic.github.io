@@ -1,6 +1,6 @@
 /************<POSITION>************/
 /* All devices */
-html, body {
+html, body, .main {
   height: 100%;
   font-size: 16pt;
 }
