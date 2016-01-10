@@ -62,6 +62,8 @@
           scrollTop: targetOffset
         }, 500);
         
+        $(".navbar-collapse").collapse('hide');
+        
         return false;
       });
       
