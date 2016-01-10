@@ -55,10 +55,10 @@
           $this.parent().addClass("active");
         
         var targetOffset = target.offset().top;
-        var docOffset = $("html").scrollTop();
+        var docOffset = $("body").scrollTop();
         var totalOffset = targetOffset - docOffset;
         
-        $("html").stop().animate({
+        $("body").stop().animate({
           scrollTop: targetOffset
         }, 500);
         
