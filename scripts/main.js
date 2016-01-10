@@ -51,7 +51,7 @@
     // });
     
     $(document).ready(function() {
-      $('.nav-link').on('click', function(e) {
+      $('.nav-link').on('click touchstart', function(e) {
         e.preventDefault();
         
         var $this = $(this);
