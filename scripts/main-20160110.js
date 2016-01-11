@@ -59,7 +59,7 @@
         var totalOffset = targetOffset - docOffset;
         
         $('html,body').stop().animate({
-          scrollTop: targetOffset
+          scrollTop: targetOffset - 50 // Account for fixed nav.
         }, 500);
         
         $(".navbar-collapse").collapse('hide');
